@@ -41,7 +41,10 @@ public class Main {
                 });
 
         for (ResStatistic resStatistic : searchResult) {
-            System.out.printf("select id : %d, cost(기획자의 기획에 따라 수시로 수수료 포함여부, 환율적용여부 등이 바뀐다는 가정 ) : %d", resStatistic.id, resStatistic.cost);
+            //기획자의 기획에 따라 수시로 수수료 포함여부, 환율적용여부 등이 바뀐다는 가정.
+            // dto객체의 변수 이름을 기획자의 요구사항에 맞게 수시로 바꿀경우 프론트에서도 작업을 해줘야 하기 때문에
+            // 변수의 이름이 포괄적인 의미를 갖도록 네이밍 됨. 해당 내용은 클린코드 책에도 있기떄문에 참고.
+            System.out.printf("select id : %d, cost: %d", resStatistic.id, resStatistic.cost);
             System.out.println();
         }
     }
